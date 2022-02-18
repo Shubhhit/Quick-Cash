@@ -95,7 +95,7 @@ const HomePage = () => {
                         <img src={Background} className="background"></img>
                     </Col>
 
-                    <Col className='banner-content'>
+                    <Col className='banner-contents'>
                         <h1>How it works</h1>
                         <div className='d-flex mt-5'>
                         <span><img src={Enquire}></img></span>
