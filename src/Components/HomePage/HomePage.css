@@ -256,3 +256,8 @@
     height: 350px;
     left: 230px;
 }
+
+.banner-contents.col {
+    position: relative;
+    top: 560px;
+}
