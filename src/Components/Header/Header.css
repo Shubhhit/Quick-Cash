@@ -1,0 +1,27 @@
+.header-links {
+    text-decoration: none;
+    margin-right: 60px;
+    color: black;
+    font-size: 16px;
+    font-weight: 600;
+    padding-top:7px;
+}
+
+.header-links:hover {
+    color: #1F34E9;
+}
+
+.login-button{
+    border: none;
+    border-radius: 12px;
+    background-color: #1F34E9;
+    color: white;
+    padding: 5px 15px;
+}
+
+@media screen and (max-width:600px){
+    .login-button {
+        width: 70px!important;
+        margin-top: 10px!important;
+    }
+}
