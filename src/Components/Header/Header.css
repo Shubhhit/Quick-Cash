@@ -1,14 +1,19 @@
 .header-links {
     text-decoration: none;
     margin-right: 60px;
-    color: black;
+    color: black!important;
     font-size: 16px;
     font-weight: 600;
     padding-top:7px;
 }
 
 .header-links:hover {
-    color: #1F34E9;
+    color: #1F34E9!important;
+}
+
+.navbar-top{
+    background-color: white!important;
+    z-index: 999!important;
 }
 
 .login-button{

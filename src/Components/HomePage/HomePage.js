@@ -1,6 +1,6 @@
 import React from 'react';
 import './HomePage.css';
-import {Row, Col, Container,Card,Button} from 'react-bootstrap';
+import {Row, Col, Container,Card,Accordion,Carousel} from 'react-bootstrap';
 import Sell from '../../Image/Sell.svg';
 import { ImArrowRight2 } from 'react-icons/im';
 import Watch from '../../Image/Watch.svg';
@@ -8,6 +8,14 @@ import Laptop from '../../Image/Laptop.svg';
 import Bag from '../../Image/Bag.svg';
 import NFT from '../../Image/NFT.svg';
 import Check from '../../Image/Check.svg';
+import Circle from '../../Image/Circle.svg';
+import Subscribe from '../../Image/Subscribe.svg';
+import Banner from '../../Image/Banner.svg';
+import Boy from '../../Image/Boy.svg';
+import Background from '../../Image/Background.svg';
+import Enquire from '../../Image/Image.svg';
+import Assess from '../../Image/Image1.svg';
+import Collect from '../../Image/Image2.svg';
 
 const HomePage = () => {
   return (
@@ -78,6 +86,41 @@ const HomePage = () => {
         </Row>
         </Container>
 
+        <div>
+           
+            <Container>
+                <Row>
+                    <Col>
+                        <img src={Boy} className="boy"></img>
+                        <img src={Background} className="background"></img>
+                    </Col>
+
+                    <Col className='banner-content'>
+                        <h1>How it works</h1>
+                        <div className='d-flex mt-5'>
+                        <span><img src={Enquire}></img></span>
+                        <span><h4 className='mt-3 ms-4'>Enquire</h4>
+                        <p className=' ms-4'>Provide details of your asset</p></span>
+                        </div>
+                        
+                        <div className='d-flex mt-5'>
+                        <span><img src={Assess}></img></span>
+                        <span><h4 className='mt-3 ms-4'>Assess</h4>
+                        <p className=' ms-4'>Your device will be assessed for condition</p></span>
+                        </div>
+
+                        <div className='d-flex mt-5'>
+                        <span><img src={Collect}></img></span>
+                        <span><h4 className='mt-3 ms-4'>Collect your cash</h4>
+                        <p className=' ms-4'>Visit the nearest store or use our home </p></span>
+                        </div>
+                    </Col>
+                </Row>
+                
+            </Container>
+            <img src={Banner}></img>
+        </div>
+
         <div className='views'>
         <Container>
             <Row>
@@ -129,6 +172,118 @@ const HomePage = () => {
             </Row>
         </Container>
         </div>
+        
+        <div>
+ 
+        <Carousel>
+            <Carousel.Item interval={1000}>
+            <div style={{backgroundColor:"#1F34E9" , height:"400px"}}></div>
+                <Carousel.Caption>
+                <h3>We are serious about providing our best services to all the customers we help, 
+                    Customers satisfaction is our number one priority.</h3>
+                <h6>Robert Fox</h6>
+                <p>CEO & Head of Products</p>
+                </Carousel.Caption>
+            </Carousel.Item>
+            <Carousel.Item interval={500}>
+            <div style={{backgroundColor:"#1F34E9" , height:"400px"}}></div>
+                <Carousel.Caption>
+                <h3>We are serious about providing our best services to all the customers we help, 
+                    Customers satisfaction is our number one priority.</h3>
+                <h6>Robert Fox</h6>
+                <p>CEO & Head of Products</p>
+                </Carousel.Caption>
+            </Carousel.Item>
+            <Carousel.Item>
+            <div style={{backgroundColor:"#1F34E9" , height:"400px"}}></div>
+                <Carousel.Caption>
+                <h3>We are serious about providing our best services to all the customers we help, 
+                    Customers satisfaction is our number one priority.</h3>
+                <h6>Robert Fox</h6>
+                <p>CEO & Head of Products</p>
+                </Carousel.Caption>
+            </Carousel.Item>
+            </Carousel>  
+        </div>
+
+        <div>
+            <img src={Circle} className="circle_right"></img>
+            <h4 className='frequently_h4'>Frequently Ask Option</h4>
+            <h1 className='frequently_h1'>Some of our frequently asked questions</h1>
+            <Container>
+            <Accordion defaultActiveKey="0">
+            <Accordion.Item eventKey="0">
+                <Accordion.Header>What are the services provided to consumers? </Accordion.Header>
+                <Accordion.Body>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+                veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+                commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+                velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+                cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
+                est laborum.
+                </Accordion.Body>
+            </Accordion.Item>
+            <Accordion.Item eventKey="1">
+                <Accordion.Header>What are the services provided to consumers? </Accordion.Header>
+                <Accordion.Body>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+                veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+                commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+                velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+                cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
+                est laborum.
+                </Accordion.Body>
+            </Accordion.Item>
+            <Accordion.Item eventKey="2">
+                <Accordion.Header>What are the services provided to consumers? </Accordion.Header>
+                <Accordion.Body>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+                veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+                commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+                velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+                cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
+                est laborum.
+                </Accordion.Body>
+            </Accordion.Item>
+            <Accordion.Item eventKey="3">
+                <Accordion.Header>What are the services provided to consumers? </Accordion.Header>
+                <Accordion.Body>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+                veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+                commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+                velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+                cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
+                est laborum.
+                </Accordion.Body>
+            </Accordion.Item>
+            <Accordion.Item eventKey="4">
+                <Accordion.Header>What are the services provided to consumers? </Accordion.Header>
+                <Accordion.Body>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+                veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+                commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+                velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+                cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
+                est laborum.
+                </Accordion.Body>
+            </Accordion.Item>
+            </Accordion>
+            </Container>
+        </div>  
+
+        <div className='subscribe'>
+            <h1 className='subscribe_h1'>Subscribe to Newsletter</h1>
+            <div className='email_field'>
+                <input placeholder='Your work email address' className='email_input'/>
+                <button className='send_btn'>Send</button>
+            </div>    
+            <Container><img src={Subscribe} className="subscribe"></img></Container>                  
+         </div>      
     </div>
   )
 }

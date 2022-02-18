@@ -1,0 +1,41 @@
+.details {
+    margin-top: 90px!important;
+}
+
+hr:not([size]) {
+    height: 4px!important;
+}
+
+.details_product{
+font-weight: 600;
+font-size: 25px;
+line-height: 22px;
+color: #1F34E9;
+}
+
+.related-products{
+    text-align: center;
+}
+
+.fw-boldd{
+    color: #223263;
+    font-weight: 750!important;
+    padding-left: 20px;
+}
+.text-muted-prices{
+    color: #1F34E9;
+    font-weight: 700!important;
+    padding-left: 20px;
+}
+
+.price-off{
+    color: grey;
+    padding-left: 20px;
+}
+
+.tab-contentt.border-0 {
+    background-color: white;
+    padding-bottom: 20px;
+    border: 1px solid #F6F7F8;
+    border-radius: 20px;
+}

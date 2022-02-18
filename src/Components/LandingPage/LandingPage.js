@@ -6,9 +6,9 @@ import HomePage from '../HomePage/HomePage';
 const LandingPage = () => {
   return (
     <div>
-        <Header/>
+        {/* <Header/> */}
         <HomePage/>
-        <Footer/>
+        {/* <Footer/> */}
     </div>
   )
 }
