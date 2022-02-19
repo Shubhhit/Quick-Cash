@@ -34,10 +34,15 @@
 
      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
+    
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    
     <script src="https://cdnjs.cloudflare.com/ajax/libs/slim.js/4.0.3/Slim.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>  
 
@@ -56,8 +61,89 @@
   <!-- App Js -->
   <script src="js/app.js"></script>
  
- 
   <script>
+      
+    let taxRate = 0.05;
+    let shippingRate = 15.00; 
+    let fadeTime = 300;
+    
+    
+    
+   const update = document.querySelectorAll(".product-quantity input").change( function() {
+      updateQuantity(this);
+    });
+    
+    
+   const remove = document.querySelectorAll(".product-removal button").click( function () {
+      removeItem(this);
+    });
+    
+    
+    
+    
+    function recalculateCart()
+    {
+      let subtotal = 0;
+      
+      
+      document.getElementByClassName("product").each(function () {
+        subtotal += parseFloat(this.children('.product-line-price').innerText);
+      });
+      
+      
+      let tax = subtotal * taxRate;
+      let shipping = (subtotal > 0 ? shippingRate : 0);
+      let total = subtotal + tax + shipping;
+      
+      
+      document.getElementByClassName("totals-value").fadeOut(fadeTime, function() {
+        document.getElementById("cart-subtotal").innerHTML = subtotal.toFixed(2);
+        document.getElementById("cart-tax").innerHTML = tax.toFixed(2);
+        document.getElementById("cart-shipping").innerHTML = shipping.toFixed(2);
+        document.getElementById("cart-total").innerHTML = total.toFixed(2);
+        if(total == 0){
+          document.getElementByClassName("checkout").fadeOut(fadeTime);
+        }else{
+          document.getElementByClassName("checkout").fadeIn(fadeTime);
+        }
+        document.getElementByClassName("totals-value").fadeIn(fadeTime);
+      });
+    }
+    
+    
+    
+    function updateQuantity(quantityInput)
+    {
+      
+      let productRow = quantityInput.parent().parent();
+      let price = parseFloat(productRow.children('.product-price').innerText);
+      let quantity = quantityInput.value;
+      let linePrice = price * quantity;
+      
+      
+      productRow.children('.product-line-price').each(function () {
+        this.fadeOut(fadeTime, function() {
+          this.innerText = linePrice.toFixed(2);
+          recalculateCart();
+          this.fadeIn(fadeTime);
+        });
+      });  
+    }
+    
+    
+    
+    function removeItem(removeButton)
+    {
+      
+      let productRow = removeButton.parent().parent();
+      productRow.slideUp(fadeTime, function() {
+        productRow.remove();
+        recalculateCart();
+      });
+    }
+  </script>
+ 
+  <!-- <script>
     var slider = tns({
         container: '.client-slider',
         loop: true,
@@ -129,7 +215,8 @@
         }
     });
 
-</script>
+</script> -->
+
 
     <!-- <script>
       $(document).ready(function(){

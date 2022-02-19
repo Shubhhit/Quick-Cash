@@ -1,4 +1,4 @@
-import React from 'react'
+import React,{useState} from 'react'
 import {Row,Col,Image,ListGroup,Card,Button, Container} from 'react-bootstrap';
 import Iphone12 from '../../Products/White13.svg';
 import './DetailsPage.css';
@@ -7,10 +7,144 @@ import White13 from '../../Products/White13.svg';
 import BlueXR from '../../Products/BlueXR.svg';
 import White12 from '../../Products/White12.svg';
 import Purple12 from '../../Products/Purple12.svg';
+import Iphone13 from '../../Products/Iphone12.svg';
+import IphoneBlack13 from '../../Products/IphoneBlack13.svg';
+import OwlCarousel from 'react-owl-carousel';
+import 'owl.carousel/dist/assets/owl.carousel.css';
+import 'owl.carousel/dist/assets/owl.theme.default.css';
+
+const state = {
+  responsive: {
+    0: {
+      items: 1,
+    },
+    450: {
+      items: 2,
+    },
+    600: {
+      items: 3,
+    },
+    1000: {
+      items: 1,
+    },
+  },
+};
 
 const DetailPage = () => {
+
+  const [counter, setCounter] = useState(1)
+
+const increment = () => {
+    setCounter(counter + 1)
+}
+
+const decrement = () => {
+    setCounter ( counter - 1)
+}
+
   return (
     <div className='details'>
+      <Container>
+        <Row>
+          <Col>
+          <img src={Iphone13}></img>
+          </Col>
+
+          <Col>
+          <h4 className='mb-4 pb-2'>iPhone 12 Pro</h4>
+          <hr className='horizon_line'/>
+          <div className='d-flex'>
+          <span><p style={{color:"#1F34E9" , fontWeight:"600" , fontSize:"20px"}}>₹65,999.00</p></span>
+          <span className='ms-2' style={{color:"grey" , fontWeight:"400" , fontSize:"18px"}}><del>₹84,900</del></span>
+          <span className='ms-2' style={{color:"red" , fontWeight:"500" , fontSize:"18px"}}>22% Off</span>
+          </div>
+          
+          <Row>
+            <Col>
+            <p>Availability:</p>
+            </Col>
+            <Col md={7}>
+            <p>In stock</p>
+            </Col>
+          </Row>
+
+          <Row>
+            <Col>
+            <p>Category:</p>
+            </Col>
+            <Col md={7}>
+            <p>Accessories</p>
+            </Col>
+          </Row>
+
+          <p>Free shipping</p>
+          <hr className='horizon_line'/>
+          <Row>
+            <Col>
+            <p>Storage Size</p>
+            </Col>
+            <Col md={7}>
+            <select style={{width:"100px", height:"30px"}}>
+            <option>64</option>
+            <option>128</option>
+            <option>256</option>
+            <option>512</option>
+          </select>
+            </Col>
+          </Row>
+          <hr className='horizon_line'/>
+          
+          <Row>
+            <Col>
+            <div class="wrapper1">
+            <span className='minus' onClick={decrement}>-</span>
+            <span className='num'>{counter}</span>
+            <span className='plus' onClick={increment}>+</span>
+            </div>
+            </Col>
+            <Col>
+            <button className='details_add_card'>Add To Cart</button>
+            </Col>
+            <Col>
+            <button className='product_buy_now'>Buy Now</button>
+            </Col>
+          </Row>
+          </Col>
+          
+          <Col lg={3}>
+          <h5 style={{color:"#1F34E9"}}>BEST <br/>SELLIING</h5>
+          
+          
+          <OwlCarousel className='owl-theme' margin={40}
+                autoplay
+                // nav={true}
+                dots={true}
+                items={1}
+                touchDrag={true}
+                lazyLoad={true}
+                loop
+                responsive={state.responsive}>
+                <div style={{border:"1px solid grey", padding:"10px 10px"}}>
+                  <img src={IphoneBlack13}></img>
+                  <h4 style={{textAlign:"center"}}>Apple iPhone 13 Mini (128GB)</h4>
+                    <div className='d-flex' style={{marginLeft:"50px"}}>
+                    <span><p style={{color:"#1F34E9" , fontWeight:"600" , fontSize:"20px"}}>₹65,999.00</p></span>
+                    <span className='ms-2' style={{color:"grey" , fontWeight:"400" , fontSize:"18px"}}><del>₹84,900</del></span>
+                    </div>
+                </div>
+
+                <div style={{border:"1px solid grey", padding:"10px 10px"}}>
+                  <img src={Iphone13}></img>
+                  <h4 style={{textAlign:"center"}}>Apple iPhone 12 (128GB)</h4>
+                    <div className='d-flex' style={{marginLeft:"50px"}}>
+                    <span><p style={{color:"#1F34E9" , fontWeight:"600" , fontSize:"20px"}}>₹65,999.00</p></span>
+                    <span className='ms-2' style={{color:"grey" , fontWeight:"400" , fontSize:"18px"}}><del>₹84,900</del></span>
+                    </div>
+                </div>
+            </OwlCarousel>
+          </Col>
+        </Row>
+      </Container>
         <Container>
         <h4 className='details_product'>Product<br/> Infomation</h4>
         <hr className='hr_line'/>

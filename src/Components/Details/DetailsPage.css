@@ -39,3 +39,63 @@ color: #1F34E9;
     border: 1px solid #F6F7F8;
     border-radius: 20px;
 }
+
+hr.horizon_line {
+    height: 1px!important;
+}
+
+.wrapper1 {
+    height: 35px;
+    width: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #F6F7F8;
+    border: 1px solid grey;
+}
+
+.wrapper1 span{
+    width: 100%;
+    text-align: center;
+    font-size: 30px;
+    font-weight: 600;
+}
+
+.wrapper1 span.num{
+    font-size: 20px;
+
+}
+
+.minus{
+    cursor: pointer;
+    color: #1F34E9;
+}
+
+.plus{
+    cursor: pointer;
+    color: #1F34E9;
+}
+
+.num{
+    cursor: pointer;
+}
+
+.details_add_card {
+    color: #1F34E9;
+    background: #f1eaf7;
+    padding: 5px 11px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.product_buy_now {
+    padding: 5px 18px;
+    color: white;
+    background: #1f34e9;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: 600;
+}
